@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.main-frame {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #008080, #40e0d0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 500px;
+  height: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color:rgb(3, 102, 102);
+}
+
+.upload-label {
+  border: 2px dashed #40e0d0;
+  padding: 40px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.upload-label:hover {
+  background-color: #f0fdfa;
+}
+
+.upload-icon {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.analyze-btn {
+  margin-top: 25px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 48px;
+  min-width: 120px;
+}
+
+.analyze-btn:hover {
+  background-color: #006666;
+}
+
+.analyze-btn:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+.toast {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #32cd32;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* Result card from earlier version */
+.result-card {
+  width: 90%;
+  max-width: 800px;
+  background: #f0fdfd;
+}
+
+.result-title {
+  font-size: 26px;
+  color: teal;
+  margin-bottom: 20px;
+}
+
+.result-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.result-info {
+  flex: 1;
+  text-align: left;
+  font-size: 18px;
+}
+
+.result-image img {
+  max-width: 250px;
+  border-radius: 15px;
+  border: 2px solid teal;
+}
+
+.upload-icon {
+  font-size: 48px;
+  color: #008080; 
+  margin-bottom: 10px;
+}
+
+.upload-preview {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #40e0d0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.preview-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reset-btn {
+  background-color: #008080;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 48px;
+  min-width: 120px;
+  margin-top: 25px;
+}
+
+.reset-btn:hover {
+  background-color: #008080;
+}
+
+.reset-btn:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.landing-title {
+  font-size: 32px;
+  color: #008080;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.landing-section {
+  margin-bottom: 30px;
+}
+
+.landing-section h3 {
+  font-size: 22px;
+  color: #006666;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #40e0d0;
+  padding-bottom: 5px;
+}
+
+.landing-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.landing-section ul {
+  margin-left: 20px;
+  color: #333;
+}
+
+.landing-section li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Pneumonia content with image layout */
+.pneumonia-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.pneumonia-text {
+  flex: 1;
+}
+
+.pneumonia-image {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.pneumonia-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid #40e0d0;
+}
+
+.detect-btn {
+  background: linear-gradient(45deg, #008080, #40e0d0);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: block;
+  margin: 30px auto 0;
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+}
+
+.detect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+}
+
+.back-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Custom scrollbar for landing page */
+.landing-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.landing-page::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.landing-page::-webkit-scrollbar-thumb {
+  background: #40e0d0;
+  border-radius: 10px;
+}
+
+.landing-page::-webkit-scrollbar-thumb:hover {
+  background: #008080;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .landing-page {
+    width: 95%;
+    padding: 20px;
+    max-height: 90vh;
+  }
+  
+  .landing-title {
+    font-size: 24px;
+  }
+  
+  .landing-section h3 {
+    font-size: 18px;
+  }
+  
+  .landing-section p,
+  .landing-section li {
+    font-size: 14px;
+  }
+  
+  .detect-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  /* Responsive pneumonia content */
+  .pneumonia-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .pneumonia-image {
+    flex: none;
+    max-width: 100%;
+    align-self: center;
+  }
+  
+  .pneumonia-image img {
+    max-width: 250px;
+  }
+}
